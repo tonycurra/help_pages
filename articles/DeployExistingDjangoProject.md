@@ -139,20 +139,16 @@ if path not in sys.path:
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 
 ## Uncomment the lines below depending on your Django version
-###### then, for Django >=1.5:
+###### then:
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
-###### or, for older Django <=1.4
-#import django.core.handlers.wsgi
-#application = django.core.handlers.wsgi.WSGIHandler()
 ```
 
 
 * Be sure to substitute the correct path to your project, the folder that contains manage.py, which you noted above.
 * Don't forget to substitute in your own username too!
 * Also make sure you put the correct value for `DJANGO_SETTINGS_MODULE`.
-* This guide assumes you're using a recent version of Django, so leave the old
-  `wsgi.WSGIHandler()` code commented out, or better still, delete it.
+* This guide assumes you're using a recent version of Django for your web app (Django>=1.5).
 
 
 Save the file, then go and hit the **Reload** button for your domain.  (You'll find one at the top right of the wsgi file editor, or you can go back to the main web tab)
